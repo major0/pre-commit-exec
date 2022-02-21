@@ -4,7 +4,7 @@
   entry: pre-commit-command
   pass_filenames: false
 - id: shell
-  language: script
+  language: python
   name: Shell Script
   entry: pre-commit-shell
   pass_filenames: false
