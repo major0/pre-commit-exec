@@ -30,8 +30,15 @@ generated website we can launch script handler, such as:
 
 This plugin supports 2 hooks: `command` and `shell`.  Both are handled by
 [Python][]'s `subprocess.run()` interface.  The only difference between them is
-that the `shell` hook grants access to shell features such as filesystem
-[globbing][].
+that the `shell` hook grants access to various shell features.
+
+From <https://docs.python.org/3/library/subprocess.html>:
+
+>  This can be useful if you are using Python primarily for the enhanced
+>  control flow it offers over most system shells and still want convenient
+>  access to other shell features such as shell pipes, filename wildcards,
+>  environment variable expansion, and expansion of ~ to a user’s home
+>  directory. 
 
 [//]: # (References)
 
