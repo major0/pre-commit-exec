@@ -11,7 +11,15 @@ For example, in building a static website and testing the [HTML] links in the
 generated website we can launch script handler, such as:
 ```
 - repo: https://github.com/major0/pre-commit-exec
-  rev: v0.1.0
+  rev: v0.1.2
+  hooks:
+    - id: command
+      alias: hugo-build
+      always_run: true
+      name: Hugo Build
+      args: ["hugo", "--cleanDestinationDir", "--noTimes", "--destination", ".build", "--baseUrl", "file:///.build/"]
+- repo: https://github.com/major0/pre-commit-exec
+  rev: v0.1.2
   hooks:
     - id: command
       alias: link-check
@@ -19,7 +27,7 @@ generated website we can launch script handler, such as:
       name: Check site links
       args: ["sh", "scripts/link-check.sh"]
 - repo: https://github.com/major0/pre-commit-exec
-  rev: v0.1.0
+  rev: v0.1.2
   hooks:
     - id: command
       alias: link-check-all
